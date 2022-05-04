@@ -294,6 +294,11 @@ a {
 
 /*footer*/
 
+.section-text span {
+    color: var(--additional);
+}
+
+
 footer {
     text-align: center;
     color: var(--additional);
