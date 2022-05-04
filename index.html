@@ -15,7 +15,7 @@
 
     <header>
         <nav class="navbar">
-            <ul class="navbar-list">
+            <ul class="navbar-list" id="navList">
                 <li class="underline-animation"> <a href="#intro"><span class="number">01.</span>Home</a></li>
                 <li class="underline-animation"> <a href="#about-me"><span class="number">02.</span>About</a></li>
                 <li class="underline-animation"> <a href="#my-work"><span class="number">03.</span>Work</a></li>
@@ -99,62 +99,63 @@
         <section class="my-work section" id="my-work">
 
             <h2 class="title" id="work-title">My work.</h2>
-
-            <div class="work" id="calculator">
-                <div class="work-description">
-                    <div class="container">
-                        <h5>Calculator</h5>
-                        <p>JavaScript Calculator created with <b>React</b> and CSS <b>Grid</b> layout.</p>
-                        <div class="work-links">
-                            <a href="https://codepen.io/nuccaa99/full/oNpLqGp" target="_blank"><i
-                                    class="fa-brands fa-codepen"></i></a>
-                            <a href="https://codepen.io/nuccaa99/full/oNpLqGp" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+            <div class="projects">
+                <div class="work" id="calculator">
+                    <div class="work-description">
+                        <div class="container">
+                            <h5>Calculator</h5>
+                            <p>JavaScript Calculator created with <b>React</b> and CSS <b>Grid</b> layout.</p>
+                            <div class="work-links">
+                                <a href="https://codepen.io/nuccaa99/full/oNpLqGp" target="_blank"><i
+                                        class="fa-brands fa-codepen"></i></a>
+                                <a href="https://codepen.io/nuccaa99/full/oNpLqGp" target="_blank"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="work-img">
-                    <img id="calc" src="pics/calc.JPG" alt="calculator">
-                </div>
-            </div>
-
-
-            <div class="work" id="to-do">
-                <div class="work-description">
-                    <div class="container">
-                        <h5>To-Do List</h5>
-                        <p>Simple to-do list where you can add new tasks, mark
-                            them as done, save them to <b>localStorage</b> and delete them if they are no
-                            longer important.</p>
-                        <div class="work-links">
-                            <a href="https://codepen.io/nuccaa99/full/YzYVaeP" target="_blank"><i
-                                    class="fa-brands fa-codepen"></i></a>
-                            <a href="https://codepen.io/nuccaa99/full/oNpLqGp" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
-                        </div>
+                    <div class="work-img">
+                        <img id="calc" src="pics/calc.JPG" alt="calculator">
                     </div>
                 </div>
-                <div class="work-img">
-                    <img id="to-do" src="pics/to-do.JPG" alt="to-do-list">
-                </div>
-            </div>
 
 
-            <div class="work" id="rps">
-                <div class="work-description">
-                    <div class="container">
-                        <h5>Rock Paper Scissors</h5>
-                        <p>Classic Rock Paper Scissors game with simple javaScript. Wish you luck!</p>
-                        <div class="work-links">
-                            <a href="https://codepen.io/nuccaa99/full/XWzLjME" target="_blank"><i
-                                    class="fa-brands fa-codepen"></i></a>
-                            <a href="https://codepen.io/nuccaa99/full/oNpLqGp" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                <div class="work" id="to-do">
+                    <div class="work-description">
+                        <div class="container">
+                            <h5>To-Do List</h5>
+                            <p>Simple to-do list where you can add new tasks, mark
+                                them as done, save them to <b>localStorage</b> and delete them if they are no
+                                longer important.</p>
+                            <div class="work-links">
+                                <a href="https://codepen.io/nuccaa99/full/YzYVaeP" target="_blank"><i
+                                        class="fa-brands fa-codepen"></i></a>
+                                <a href="https://codepen.io/nuccaa99/full/oNpLqGp" target="_blank"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
+                    <div class="work-img">
+                        <img id="to-do" src="pics/to-do.JPG" alt="to-do-list">
+                    </div>
                 </div>
-                <div class="work-img">
-                    <img id="rps" src="pics/rps.JPG" alt="rps">
+
+
+                <div class="work" id="rps">
+                    <div class="work-description">
+                        <div class="container">
+                            <h5>Rock Paper Scissors</h5>
+                            <p>Classic Rock Paper Scissors game with simple javaScript. Wish you luck!</p>
+                            <div class="work-links">
+                                <a href="https://codepen.io/nuccaa99/full/XWzLjME" target="_blank"><i
+                                        class="fa-brands fa-codepen"></i></a>
+                                <a href="https://codepen.io/nuccaa99/full/oNpLqGp" target="_blank"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-img">
+                        <img id="rps" src="pics/rps.JPG" alt="rps">
+                    </div>
                 </div>
             </div>
             <div class="see-more-button">
@@ -178,7 +179,17 @@
         </section>
 
         <footer>
-            <p><small>Designed and Built by Nutsa Kharazishvili.</small></p>
+
+            <div id="social-media">
+                <a href="https://www.linkedin.com/in/nino-kharazishvili-368a441b0/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/nuccaa99" target="_blank"><i class="fa-brands fa-github"
+                        target="_blank"></i></a>
+                <a href="https://codepen.io/nuccaa99/pens/public" target="_blank"><i
+                        class="fa-brands fa-codepen"></i></a>
+                <a href="https://www.instagram.com/nuccaa/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <p><small>Designed and Built by Nutsa Kharazishvili.</small></p>
+            </div>
         </footer>
     </main>
 </body>
