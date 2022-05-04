@@ -36,9 +36,14 @@ a, a:hover, a:focus, a:active {
     --bla: #BCD979;
 }
 
+body {
+    background-color: var(--background);
+}
+
+
 /*header*/
 
-header {
+.navbar-list {
     background-color: rgb(32, 30, 31, 0.8);
     top: 0;
     left: 0;
@@ -48,24 +53,26 @@ header {
     display: flex;
     align-items: center;
     justify-content: end;
+    overflow: hidden;
     font-size: 0.85em;
     position: fixed;
     z-index: 999;
 
 }
 
-header * {
+.navbar-list * {
     display: inline;
 }
 
-header li {
+.navbar-list li {
     margin: 20px;
 }
 
-header li a {
+.navbar-list li a {
     color: var(--fonts);
     text-decoration: none;
 }
+
 
 .underline-animation {
     display: inline-block;
@@ -94,14 +101,25 @@ header li a {
 
 }
 
-body {
-    background-color: var(--background);
-}
 
 
 .number {
     color: var(--additional)
 }
+
+
+@media screen and (max-width: 600px) {
+    .navbar-list li {
+        font-size: 0.8em;
+    }
+
+    .navbar-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 
 
 /*intro with pic*/
@@ -147,10 +165,24 @@ body {
     font-size: 0.5em;
 }
 
+@media screen and (max-width: 600px) {
+    .intro-text {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .intro-text {
+        padding-left: 100px;
+    }
+}
+
+
 
 #my-pic {
     width: 250px;
     height: 250px;
+    margin: 15px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     box-shadow: var(--additional) 10px -10px;
@@ -162,6 +194,15 @@ body {
     transition: 0.3s;
 
 }
+
+@media screen and (max-width: 900px) {
+    #my-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
 
 
 /*section title*/
@@ -176,11 +217,25 @@ body {
     border-bottom: 0.5px dashed var(--additional);
 }
 
+@media screen and (max-width: 900px) {
+    .title {
+        font-size: 18px;
+    }
+}
+
 /*sections in general*/
 
 .section {
     padding: 150px 200px;
 
+}
+
+@media screen and (max-width: 900px) {
+    .section {
+        padding: 100px 50px;
+        font-size: 0.8em;
+
+    }
 }
 
 .section-text {
@@ -206,8 +261,7 @@ body {
     top: 250px;
     right: 0;
     padding-top: 40px;
-    background-color: var(--background);
-
+    background-color: transparent;
     border-left: 1px dashed var(--additional);
 }
 
@@ -217,6 +271,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
 }
 
 
@@ -307,35 +367,23 @@ footer {
     color: var(--background);
 }
 
-/*work*/
-
-.album {
-    background-color: var(--background);
-}
-
-.card {
-    background-color: var(--background);
-    color: var(--fonts);
-    align-items: center;
-    border: none;
-    border-radius: 0%;
-    text-align: center;
-}
-
-.card:hover {
-    border-bottom: 1px dashed var(--additional);
-}
-
-.btn {
-    margin: 5px;
-}
-
 
 /*calculator project*/
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
 
 .work {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding-bottom: 100px;
 }
 
 .work-description {
@@ -347,7 +395,7 @@ footer {
 
 
 .container {
-    width: 500px;
+    width: 400px;
     min-height: 179px;
     max-height: 180px;
     color: var(--additional);
@@ -377,19 +425,57 @@ footer {
 
 .work-img img {
     width: 610px;
+    margin-right: 150px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     border-radius: 2px;
+
 }
 
-.projects {
-    display: flex;
-    flex-direction: row;
+
+@media screen and (max-width: 1500px) {
+    .work-description {
+        right: -170px;
+    }
 }
 
-.work {
-    padding-bottom: 100px;
+@media screen and (max-width: 1400px) {
+    .work-description {
+        right: -190px;
+    }
 }
+
+@media screen and (max-width: 1300px) {
+    .work-description {
+        right: -210px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .work-img img {
+        display: none;
+        margin-right: 0;
+    }
+
+    .work-description {
+        right: 210px;
+        width: 50px;
+        padding-left: 30px;
+    }
+
+
+    .work {
+        padding-bottom: 50px;
+    }
+}
+
+
+
+
+
+
+
+
 
 #work-title {
     text-align: left;
@@ -419,6 +505,7 @@ dd {
     padding-inline-start: 1ch;
 
 }
+
 dt {
     color: var(--additional);
     font-size: 0.9em;
